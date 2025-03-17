@@ -20,7 +20,17 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('productos', ProductoController::class);
+    Route::get('/productos', [ProductoController::class, 'index'])->name('productos.index'); // Mostrar lista
+    Route::get('/productos/create', [ProductoController::class, 'create'])->name('productos.create'); // Formulario de creación
+    Route::post('/productos', [ProductoController::class, 'store'])->name('productos.store'); // Guardar producto
+    Route::get('/productos/{producto}', [ProductoController::class, 'show'])->name('productos.show'); // Ver producto
+    Route::get('/productos/{producto}/edit', [ProductoController::class, 'edit'])->name('productos.edit'); // Formulario de edición
+    Route::put('/productos/{producto}', [ProductoController::class, 'update'])->name('productos.update'); // Actualizar producto
+    Route::delete('/productos/{producto}', [ProductoController::class, 'destroy'])->name('productos.destroy'); // Eliminar producto
+
+    // Ruta personalizada para confirmar eliminación
+    Route::get('/productos/{producto}/confirmar', [ProductoController::class, 'confirmarEliminacion'])
+        ->name('productos.confirmarEliminacion');
 });
 
 Route::post('/logout', function () {
@@ -30,4 +40,4 @@ Route::post('/logout', function () {
     return redirect('/login');
 })->name('logout');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

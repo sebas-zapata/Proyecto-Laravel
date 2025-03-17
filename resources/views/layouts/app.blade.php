@@ -28,7 +28,7 @@
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 {{ $header }}
                 <a href="{{ route('productos.index') }}" class="btn btn-primary">
-                    CRUD de Productos
+                <i class="bi bi-box-seam"></i>
                 </a>
             </div>
         </header>

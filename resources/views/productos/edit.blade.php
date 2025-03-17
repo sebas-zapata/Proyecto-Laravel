@@ -22,8 +22,8 @@
             <label>Stock:</label>
             <input type="number" name="stock" class="form-control" value="{{ $producto->stock }}" required>
         </div>
-        <button type="submit" class="btn btn-primary">Actualizar</button>
-        <a href="{{ route('productos.index') }}" class="btn btn-secondary">Volver</a>
+        <button type="submit" class="btn btn-primary"> <i class="bi bi-arrow-clockwise"></i> Actualizar</button>
+        <a href="{{ route('productos.index') }}" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Volver</a>
     </form>
 </div>
 @endsection

@@ -10,7 +10,7 @@ class ProductoController extends Controller
 
     public function index()
     {
-        $productos = Producto::all();
+        $productos = Producto::paginate(5);
         return view('productos.index', compact('productos'));
     }
 
@@ -56,6 +56,12 @@ class ProductoController extends Controller
         $producto->update($request->all());
 
         return redirect()->route('productos.index')->with('success', 'Producto actualizado correctamente');
+    }
+
+    public function confirmarEliminacion(Producto $producto)
+    {
+        return view('productos.eliminar', compact('producto')); // ✅ CORRECTO
+
     }
 
     public function destroy(Producto $producto)
