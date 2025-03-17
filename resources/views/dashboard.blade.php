@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <a href="{{ route('productos.index') }}" class="btn btn-primary">
-                        Ir al CRUD de Productos
+                    Ir al CRUD de Productos
                     </a>
 
                     {{ __("You're logged in!") }}

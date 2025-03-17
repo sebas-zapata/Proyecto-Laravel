@@ -38,6 +38,12 @@ class ProductoController extends Controller
         return view('productos.edit', compact('producto'));
     }
 
+    public function show($id)
+    {
+        $producto = Producto::findOrFail($id); // Busca el producto o lanza un error 404
+        return view('productos.detalle', compact('producto')); // Retorna la vista con el producto
+    }
+
     public function update(Request $request, Producto $producto)
     {
         $request->validate([
