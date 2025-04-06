@@ -9,7 +9,7 @@
 @section('content')
 <div class="container">
     <h1>Lista de Productos</h1>
-    <a href="{{ route('productos.create') }}" class="btn btn-success m-3"><i class="bi bi-plus-circle"></i> Nuevo producto</a>
+    <a href="{{ route('productos.create') }}" class="btn btn-success m-3 btn-sm"><i class="bi bi-plus-circle"></i> Nuevo producto</a>
 
     @if(session('success'))
     <div class="alert alert-success alert-dismissible fade show d-flex align-items-center m-2" role="alert">

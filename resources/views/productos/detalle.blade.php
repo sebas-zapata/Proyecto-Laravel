@@ -16,9 +16,9 @@
                 <li class="list-group-item"><strong>Stock disponible:</strong> {{$producto->stock}}</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
-                <a class="btn btn-secondary" href="{{ route('productos.index') }}"><i class="bi bi-arrow-left"></i> Volver</a>
-                <a href="{{ route('productos.edit', $producto) }}" class="btn btn-primary"><i class="bi bi-pencil-square"></i> Editar</a>
-                <a href="{{ route('productos.confirmarEliminacion', $producto) }}" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</a>
+                <a class="btn btn-secondary btn-sm" href="{{ route('productos.index') }}"><i class="bi bi-arrow-left"></i> Volver</a>
+                <a href="{{ route('productos.edit', $producto) }}" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i> Editar</a>
+                <a href="{{ route('productos.confirmarEliminacion', $producto) }}" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Eliminar</a>
             </div>
         </div>
         <div class="card-footer text-center bg-light rounded-bottom-4">

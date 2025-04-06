@@ -14,10 +14,10 @@
                 @csrf
                 @method('DELETE')
 
-                <button type="submit" class="btn btn-danger">
+                <button type="submit" class="btn btn-danger btn-sm">
                     <i class="bi bi-trash"></i> Eliminar
                 </button>
-                <a href="{{ route('productos.index') }}" class="btn btn-secondary">
+                <a href="{{ route('productos.index') }}" class="btn btn-secondary btn-sm">
                     <i class="bi bi-arrow-left"></i> Volver
                 </a>
             </form>
