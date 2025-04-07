@@ -1,3 +1,8 @@
+@if (!auth()->check())
+    <script>
+        window.location.href = "{{ route('login') }}";
+    </script>
+@endif
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <!-- Scripts -->
@@ -28,7 +33,7 @@
         <header class="bg-white shadow">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 {{ $header }}
-                <a href="{{ route('productos.index') }}" class="btn btn-primary btn-sm">
+                <a href="{{ route('productos.index') }}" class="btn btn-secondary m-3 m-auto w-50 d-block">
                 <i class="bi bi-box-seam"></i> Gestionar productos
                 </a>
             </div>
