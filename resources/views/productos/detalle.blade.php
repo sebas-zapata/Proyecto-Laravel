@@ -13,6 +13,7 @@
                 <li class="list-group-item"><strong>ID:</strong> {{$producto->id}}</li>
                 <li class="list-group-item"><strong>Descripción:</strong> {{$producto->descripcion}}</li>
                 <li class="list-group-item"><strong>Precio:</strong> ${{$producto->precio}}</li>
+                <li class="list-group-item"><strong>Categoria:</strong> {{ $producto->categoria->nombre ?? 'Sin categoría' }}</li>
                 <li class="list-group-item"><strong>Stock disponible:</strong> {{$producto->stock}}</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">

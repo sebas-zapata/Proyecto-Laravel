@@ -26,6 +26,7 @@
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Precio</th>
+                <th>Categoria</th>
                 <th>Stock</th>
                 <th>Acciones</th>
             </tr>
@@ -37,6 +38,7 @@
                 <td>{{ $producto->nombre }}</td>
                 <td>{{ $producto->descripcion }}</td>
                 <td>${{ number_format($producto->precio, 2) }}</td>
+                <td>{{ $producto->categoria->nombre ?? 'Sin categoría' }}</td>
                 <td>{{ $producto->stock }}</td>
                 <td>
                     <a class="btn btn-warning m-1 btn-sm" href="{{ route('productos.show', $producto) }}"><i class="bi bi-eye-fill"></i> Ver</a>

@@ -21,6 +21,18 @@
             <label>Stock:</label>
             <input type="number" name="stock" class="form-control" required>
         </div>
+        <div class="mb-3">
+            <label>Categoria:</label>
+            <select name="categoria_id" class="form-control">
+                <option value="">-- Selecciona una categoría --</option>
+                @foreach ($categorias as $categoria)
+                <option value="{{ $categoria->id }}"
+                    {{ old('categoria_id', $producto->categoria_id ?? '') == $categoria->id ? 'selected' : '' }}>
+                    {{ $categoria->nombre }}
+                </option>
+                @endforeach
+            </select>
+        </div>
         <button type="submit" class="btn btn-success"><i class="bi bi-save"></i> Guardar</button>
         <a href="{{ route('productos.index') }}" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Volver</a>
     </form>
